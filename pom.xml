@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Subway.Central</groupId>
+	<artifactId>Subway-Central</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<!--<name>Central</name> -->
+	<properties>
+		<!--When rerunFailingTestsCount is set to a value larger than 0 and the
+			test fails, then it will be re-run and each run information will also be
+			output. Each run with its number and trimmed stack trace will be output. -->
+
+		<failsafe.rerunFailingTestsCount>2</failsafe.rerunFailingTestsCount>
+		<surefire.rerunFailingTestsCount>2</surefire.rerunFailingTestsCount>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<!-- Dependency versions -->
+
+		<!-- Configurable variables -->
+		<!--It is important to note that there is no guarantee in which order tests
+			will be run. That's why it's important that there are no dependencies between
+			test cases. -->
+		<!--Generic Properties -->
+		<projectName>Central</projectName>
+		<language>en</language>
+		<country>US</country>
+		<buildNumber>2432</buildNumber>
+		<!--Common Properties -->
+		<spring.profiles.active>sauce</spring.profiles.active>
+		<sauceUserName>madan_l</sauceUserName>
+		<sauceAccessKey>67eee375-9834-42d7-9da4-85622d3fb417</sauceAccessKey>
+		<newCommandTimeout>600</newCommandTimeout>
+		<!--<locale>us_EN</locale>-->
+		<operatingSystem>windows</operatingSystem>
+		<!-- Browser -->
+		<driverName>WebApp</driverName>
+		<platform>browser</platform>
+		<platformVersions>63.0</platformVersions>
+		<browserName>chrome</browserName>
+		<autoringappURL>https://qe-thefeedauthoring.test.subway.com</autoringappURL>
+		<loggedURL>https://qe-thefeedauthoring.test.subway.com</loggedURL>
+		<browserVersion>63.0</browserVersion>
+		<seleniumGrid>http://localhost:4444/wd/hub</seleniumGrid>
+		<testFile>Testng.xml</testFile>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<encoding>iso-8859-1</encoding>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<systemPropertyVariables>
+						<ProjectName>${projectName}</ProjectName>
+						<spring.profiles.active>local</spring.profiles.active>
+						<sauceUserName>madan_l</sauceUserName>
+						<sauceAccessKey>67eee375-9834-42d7-9da4-85622d3fb417</sauceAccessKey>
+						<language>${language}</language>
+						<country>${country}</country>
+						<!--<locale>us_EN</locale>-->
+						<ExplicitWaitTime>600</ExplicitWaitTime>
+						<!--Override the values of the Maven properties below on command line
+							by using the -D switch; if we do not override its value, it will use the
+							value we have set in the POM as a default. -->
+						<!--Mobile -->
+						<platformVersions>${platformVersions}</platformVersions>
+						<!-- driverName can be MobileApp/WebApp -->
+						<driverName>${driverName}</driverName>
+						<appURL>${autoringappURL}</appURL>
+						<loggedURL>${loggedURL}</loggedURL>>
+						<browserVersion>${browserVersion}</browserVersion>
+						<!--End Mobile -->
+						<operatingSystem>${operatingSystem}</operatingSystem>
+						<browserName>${browserName}</browserName>
+						<platform>${platform}</platform>
+						<newCommandTimeout>${newCommandTimeout}</newCommandTimeout>
+						<buildNumber>${buildNumber}</buildNumber>
+						<seleniumGrid>${seleniumGrid}</seleniumGrid>
+					</systemPropertyVariables>
+					<suiteXmlFiles>
+						<!-- TestNG suite XML files -->
+						<suiteXmlFile>${testFile}</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>4.3.1.RELEASE</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.3.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.3.1.RELEASE</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>4.3.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>LATEST</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fwh.qa</groupId>
+			<artifactId>automationFramework</artifactId>
+			<version>4.8.23-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>4.3.1.RELEASE</version>
+		</dependency>
+		<!--<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>-->
+<!--		<dependency>
+			<groupId>com.google.android</groupId>
+			<artifactId>android</artifactId>
+			<version>LATEST</version>
+			<scope>provided</scope>
+		</dependency>-->
+		<dependency>
+			<groupId>com.saucelabs</groupId>
+			<artifactId>sauce_junit</artifactId>
+			<version>LATEST</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.2</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>automationFramework</id>
+			<url>http://10.49.128.10:8090/repository/automationFramework/</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>automationFramework</id>
+			<name>automationFramework</name>
+			<url>http://10.49.128.10:8090/repository/automationFramework/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>saucelabs-repository</id>
+			<url>https://repository-saucelabs.forge.cloudbees.com/release</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>automationFramework</id>
+			<name>automationFramework</name>
+			<url>http://10.49.128.10:8090/repository/automationFramework/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+
+	</pluginRepositories>
+</project>

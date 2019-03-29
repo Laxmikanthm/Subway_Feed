@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Central">
+	<test name="Test">
+		<parameter name="platform" value="${platform}"></parameter>
+		<parameter name="browserOrDevice" value="${browserName}"></parameter>
+		<parameter name="version" value="${browserVersion}"></parameter>
+		<parameter name="os" value="${operatingSystem}"></parameter>
+		<parameter name="driverName" value="${driverName}"></parameter>
+		<parameter name="appPaths" value="${appURL}"></parameter>
+		<parameter name="projectName" value="${driverName}"></parameter>
+		<classes>
+			<class name="tests.AuthoringCenter.AuthorContentTest"/>
+		</classes>
+	</test>
+</suite>

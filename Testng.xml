@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Central">
+    <test name="Test">
+        <parameter name="platform" value="${platform}"></parameter>
+        <parameter name="browserOrDevice" value="${browserName}"></parameter>
+        <parameter name="version" value="${browserVersion}"></parameter>
+        <parameter name="os" value="${operatingSystem}"></parameter>
+        <parameter name="driverName" value="${driverName}"></parameter>
+        <parameter name="appPaths" value="${appURL}"></parameter>
+        <parameter name="projectName" value="${driverName}"></parameter>
+
+        <classes>
+
+            <class name="tests.Feed.FilterByContentTypeTest">
+                <methods>
+                    <include name="hqEmployeeFilterByRole_130676"/>
+                    <include name="formFilterByContentType_128706"/>
+                    <include name="manualsFilterByContentType_128790"/>
+                    <include name="vendorsFilterByRole_130680"/>
+                    <include name="adAgencyFilterByRole_130681"/>
+                    <include name="articlesFilterByContentType_128793"/>
+                    <include name="fieldConsultantFilterByRole_130679"/>
+                    <include name="developmentAgentFilterByRole_130674"/>
+                    <include name="filterByContentByDocument_130668"/>
+                    <include name="filterByContentByWeb_129151"/>
+                    <include name="filterByContentByVideo_130667"/>
+                    <include name="searchAndViewContent_161986"/>
+                    <include name="filterByContentByMultipleTypeSelect_163134"/>
+                </methods>
+            </class>
+            <class name="tests.AuthoringCenter.AuthorContentTest">
+                <methods>
+                    <include name="verifyContentAuthorCanLogin_147545_146882"/>
+                    <include name="verifyContentAuthorCanLogout_146915"/>
+                    <include name="verifyContentApproverCanLogin_146884_147546"/>
+                    <include name="verifyContentApproverCanLogout_146916"/>
+                    <include name="verifyLoginWithInvalidCredentials_150342"/>
+                    <include name="verifySelectTemplate_147243"/>
+                    <include name="verifyChangeLayoutOfDraftItem_118996"/>
+                    <include name="verifyCreateContentUsingHomePageCallToAction_165730"/>
+                    <include name="verifyContentAuthorIsAbleToApprove_152999"/>
+                    <include name="verifyViewAfterSetSecurityOnContent_135233_146434"/>
+                    <include name="verifyCreateContentUsingModalCarousel_165728_161052"/>
+                    <include name="verifyContentAppIsAbleArticleWithModalCarousel_161053"/>
+                    <include name="verifyContentApproverAbleToChangeLayoutOfDraftItem_151293"/>
+                    <include name="verifyAssociatedTagsWithContent_135235"/>
+                    <include name="verifyPreviewAnArticleInDifferentLanguage_147391"/>
+                    <include name="verifyFilledContentInformationSaved_109530"/>
+                    <include name="verifyModalCarouselWithoutURL_150404"/>
+                    <include name="verifyModalCarouselForContentApprover_160746"/>
+                    <include name="verifyContentAuthorAbleToViewRejectButton_151236"/>
+                    <include name="verifyContentApproverAbleToApproveContent_140276"/>
+                    <include name="verifyContentApprovePermission_147214"/>
+                    <include name="verifyContentRejectionPermission_147582"/>
+                    <include name="verifyRejectContentWaitForSMEApproval_147581_140277"/>
+                    <include name="verifyPaginationWhileLoggedContentApprover_142105"/>
+                    <include name="verifyPaginationWhileLoggedContentAuthor_142090"/>
+                    <include name="verifySavedContentByNavigatingBack_165445"/>
+                    <include name="verify404PageInAuthoring_167311"/>
+                </methods>
+            </class>
+
+            <class name="tests.AuthoringCenter.DistributionTest">
+                <methods>
+                    <include name="verifyDistributionApproverCanLogOut_146914"/>
+                    <include name="VerifyDistributionAuthorAccessToContentDashboard_147241"/>
+                    <include name="resubmitRejectedDistribution_137635"/>
+                    <include name="verifyDistributionAuthorCanLogOut_146917"/>
+                    <include name="verifyDistributionAuthorCanLogin_146890"/>
+                    <include name="verifyDistributionApproverCanLogin_146905_147548"/>
+                    <include name="VerifyOpenDraftDistribution_120597"/>
+                    <include name="verifyTargetingUserswithContentDistributionAuthor_147739"/>
+                    <include name="verifyAddingLowPriorityToExistingDistribution_135231"/>
+                    <include name="verifyAddingHighPriorityToExistingDistribution_137558"/>
+                    <include name="verifyDistributionIsDisplayedInApprovalQueueWithTimeAndDate_152921"/>
+                    <include name="verifyAddingHigPriorityToNewDistribution_137561"/>
+                    <include name="verifyDistributionAuthorAbleToChangeLayoutOfDraftItem_151317"/>
+                    <include name="TC_DistributionAproverCanLogOut_146918"/>
+                    <include name="VerifyDistributionApproverAbleToChangeLayoutOfDraftItem_151304"/>
+                    <include name="verifyApproveDistributionWithLowPriority_146347_120598"/>
+                    <include name="verifyApproveDistributionWithMediumPriority_146349"/>
+                    <include name="verifyApproveDistributionWithHighPriority_146350"/>
+                    <include name="CreateDraftDistributionWithHighPriority_146370"/>
+                    <include name="CreateDraftDistributionWithMediumPriority_146369_137560"/>
+                    <include name="CreateDraftDistributionWithLowPriority_146368_137559"/>
+                    <include name="VerifyDistributionApprovalPermission_147611"/>
+                    <include name="VerifyDistributionRejectionPermission_147613"/>
+                    <include name="VerifyApproveDistribution_147259"/>
+                    <include name="VerifyRejectDistribution_137389_137390"/>
+                    <include name="verifyResubmitRejectedDistribution_162546"/>
+                    <include name="verifyDraftDistributionFilterDistributionAuthor_143198"/>
+                    <include name="VerifyAwaitingApprovalDistributionFilterDistributionAuthor_143199"/>
+                    <include name="VerifyApprovedDistributionFilterDistributionAuthor_143200"/>
+                    <include name="verifyDeleteDistributionItem_135232"/>
+                    <include name="VerifyDraftDistributionFilterDistributionApprover_143206"/>
+                    <include name="VerifyAwaitingApprovalFilterDistributionApprover_143207"/>
+                    <include name="VerifyApprovedDistributionFilterDistributionApprover_143208"/>
+                    <include name="verifyDraftFilterDistributionApprover_143202"/>
+                    <include name="verifySMEValidationFilterDistributionApprover_143203"/>
+                    <include name="verifyApprovedFilterDistributionApprover_143205"/>
+                    <include name="verifyDraftFilterDistributionAuthor_143186"/>
+                    <include name="verifySMEValidationFilterDistributionAuthor_143187"/>
+                    <include name="verifyApprovedFilterDistributionAuthor_143188"/>
+                    <include name="verifyAuthoringNegativeTestcaseForCreateDistribution_151894"/>
+                    <include name="verifyMultipleDistributionLocationsSelection_147740"/>
+                    <include name="verifyDistApproverExcludeSegmentsFromTargeting_151828"/>
+                    <include name="verifyDistributionApproverContentPagination_142134"/>
+                    <include name="verifyDistributionApproverContentPagination_142134"/>
+                </methods>
+            </class>
+
+            <class name="tests.AuthoringCenter.AuthoringLanguageTest">
+                <methods>
+                    <include name="verifySelectedLanguage_160736"/>
+                    <include name="verifyKoreanLanguageWorkflowVersion_186377"/>
+                    <include name="verifySpanishLanguageWorkflowVersion_186399"/>
+                    <include name="verifyTurkishLanguageWorkflowVersion_186402"/>
+                    <include name="verifySelectALanguage_117494"/>
+                </methods>
+            </class>
+
+            <class name="tests.AuthoringCenter.AuthorSegmentTest">
+                <methods>
+                    <include name="verifyLogin_146908"/>
+                    <include name="verifyLogout_146919"/>
+                    <include name="verifyCreateNewSegment_115290"/>
+                    <include name="verifyDeleteSegmentWithoutDistribution_153144"/>
+                    <include name="verifyUploadSegment_160112"/>
+                    <include name="verifyMultipleAttributesOfSameType_152920"/>
+                    <include name="verifyMultipleAttributesOfDifferentType_152919"/>
+                    <include name="verifyActiveStatusInTheSegmentDashboard_190379"/>
+                    <include name="verifyInActiveStatusInTheSegmentDashboard_190381"/>
+                </methods>
+            </class>
+
+            <class name="tests.AuthoringCenter.MultiArticleTopicTest">
+                <methods>
+                    <include name="verifyMultiTopicArticleEnglish_129149_121322"/>
+                    <include name="verifyMultiTopicArticleChinesePRC_147422"/>
+                    <include name="verifyMultipleTopicArticleChineseTaiwan_147430"/>
+                    <include name="verifyMultiTopicArticleFrench_132282"/>
+                    <include name="verifyMultiTopicArticlePortuguese_147402"/>
+                    <include name="verifyMultiTopicArticleGerman_132283"/>
+                    <include name="verifyMultiTopicArticleKorean_132281"/>
+                    <include name="verifyMultiTopicArticleTurkish_132280"/>
+                    <include name="verifyPreviewContentForMultiSection_145643"/>
+                </methods>
+            </class>
+
+            <class name="tests.AuthoringCenter.SingleArticleTopicTest">
+                <methods>
+                    <include name="verifySingleArticleTopicEnglish_129322_117345"/>
+                    <include name="verifySingleArticleTopicChinesePRC_129350_161626"/>
+                    <include name="verifySingleArticleTopicPortuguese_129351"/>
+                    <include name="verifySingleArticleTopicFrench_129352"/>
+                    <include name="verifySingleArticleTopicGerman_129353"/>
+                    <include name="verifySingleArticleTopicKorean_129354"/>
+                    <include name="verifySingleArticleTopicSpanish_129361"/>
+                    <include name="verifySingleSectionArticleForApproval_118189"/>
+                    <include name="verifySingleArticleTopicChineseTaiwan_147432"/>
+                    <include name="verifyPreviewAnArticleWithSingleSection_145644"/>
+                </methods>
+            </class>
+
+            <class name="tests.AuthoringCenter.DraftContentTest">
+                <methods>
+                    <include name="editContentCategoryTextFieldInPreviewSettings_117152"/>
+                    <include name="verifyDraftContentFilterByKeyword_140814"/>
+                </methods>
+            </class>
+
+            <class name="tests.AuthoringCenter.ViewContentTest">
+                <methods>
+                    <include name="verifyDeleteContentInDraftMode_117340"/>
+                    <include name="verifyDeleteDraftStateContent_135089"/>
+                    <include name="verifyDeleteDraftContentOtherThanEnglishLanguage_135503"/>
+                    <include name="verifyViewContentInDraftMode_117338"/>
+                    <include name="verifyAuthorPreviewNewContent_122528"/>
+                    <include name="verifyURLName_163145"/>
+                    <include name="verifyDeletePendingStateContent_135502"/>
+                    <include name="verifyDeletePendingContentOtherThanEnglishLanguage_135504"/>
+                    <include name="verifyEditDraftStateContent_117339"/>
+                    <include name="verifyCreateVersionDocument_134613"/>
+                    <include name="verifyCreateContentWithSingleSectionNewsPageTemplate_165725"/>
+                    <include name="verifyCreateContentWithMultiSectionNewsPageTemplate_165727"/>
+                    <include name="verifyContentType_166818"/>
+                </methods>
+            </class>
+
+            <class name="tests.Feed.ProfileSettings">
+                <methods>
+                    <include name="changeUserProfileTimeZone_146356"/>
+                    <include name="changeUserProfilePreferredLanguage_137631"/>
+                    <include name="userShouldNotChangeUserPreferredEmail_146364"/>
+                    <include name="verifyAlertTypesInNotificationsSection_185982"/>
+                    <include name="verifyReceiveAlert_160422_165429"/>
+                    <include name="verifyColorWithTurnONOrOffNotification_185978_137634"/>
+                    <include name="verifyReceiveAlert_166819"/>
+                    <include name="verifyUserProfilePreLanguageFrench_151941"/>
+                    <include name="verifyUserProfilePreLanguageGerman_151945"/>
+                    <include name="verifyUserProfilePreLanguagePortuguese_151979"/>
+                    <include name="verifyUserProfilePreLanguageEnglish_151931"/>
+                </methods>
+            </class>
+            <class name="tests.Feed.LandingPageTest">
+                <methods>
+                    <include name="verifyTextAndContentInFooter_147564"/>
+                    <include name="verifyResultsFilterByYear_146907"/>
+                    <include name="verifyResultsFilterByMonth_146906"/>
+                    <include name="verifyResultsFilterByWeek_118751"/>
+                    <include name="verifyTrainingResultsFilterByTopics_128826"/>
+                    <include name="verifyTechnologyResultsFilterByTopics_128824"/>
+                    <include name="verifyRestaurantsAndFacilitiesResults_128823"/>
+                    <include name="verifyProductsAndFoodHandlingResults_128822"/>
+                    <include name="verifyBusinessAndFinancialManagementResults_128797_164759"/>
+                    <include name="verifyCompanyEventsAndBrandsResults_128819_164760"/>
+                    <include name="verifyResultsByCustomers_128805"/>
+                    <include name="verifyResultsByDevelopment_128806"/>
+                    <include name="verifyResultsByEmployees_128807"/>
+                    <include name="verifyResultsByLegalAndHumanResources_128820"/>
+                    <include name="verifyResultsByMarketingAndAdvertising_128821"/>
+                    <include name="verifySubTopicsFilterByTopics_128829"/>
+                    <include name="verifyLogin_109527"/>
+                    <include name="verifyLogout_109539"/>
+                    <include name="verifyFeedHomePage_109578"/>
+                    <include name="verifyEnglishDefaultLanguage_161977"/>
+                    <include name="verifyNewsFeedInHomePage_116538"/>
+                    <include name="pagingForSearchResults_118761"/>
+                    <include name="verifySearchResultsForAllTime_161968"/>
+                    <include name="verify404Page_167932"/>
+                    <include name="authenticatedUserLogout_165017"/>
+                    <include name="loginToFeedWithWrongCredentials_150315"/>
+                    <include name="filteringSearchResultsByLanguage_118749"/>
+                    <include name="searchingByKeywordAndBookmarkItem_118748_124340_151384_122624"/>
+                    <include name="verifyFooterInPages_147563"/>
+                    <include name="verifyNewsFeedWithContentTargetedSegment_161405"/>
+                    <include name="verifyFilterByTopicResultsAndBreadcrumb_165460_165480"/>
+                    <include name="verifyHQUserIsAbleToSeeAllTheContentOnFeed_161038"/>
+                    <include name="verifyViewingDocumentsInSearchResults_155052"/>
+                </methods>
+            </class>
+
+            <class name="tests.Feed.FavoriteToolTest">
+                <methods>
+                    <include name="verifyToolsInAlphabeticalOrder_119677_119678"/>
+                </methods>
+            </class>
+
+            <class name="tests.Feed.ViewBookMarkedItemsTest">
+                <methods>
+                    <include name="verifyBookmarkedItem_122624"/>
+                    <include name="verifyBookmarkedDocument_152148_152385"/>
+                    <include name="verifyBookmarkedRightRailDocument_152140"/>
+                    <include name="verifyBookmarkList_115182"/>
+                    <include name="verifyNumberOfResultsConfiguredInFeed_161023"/>
+                </methods>
+            </class>
+
+            <class name="tests.EndToEnd.NotificationsTest">
+                <methods>
+                    <include name="verifyCreateCriticalUpdateNotificationAndViewInFeed_188104"/>
+                    <include name="verifyCreateGeneralNotificationAndViewInFeed_188092"/>
+                    <include name="verifyCreateWindowKitNotificationAndViewInFeed_188087"/>
+                    <include name="verifyCreateOpsManualUpdateNotificationAndViewInFeed_188082"/>
+                    <include name="verifyCreateTechnologyUpdateNotificationAndViewInFeed_188071"/>
+                    <include name="verifyCreateTechnologyOutageAlertNotificationAndViewInFeed_188063"/>
+                    <include name="verifyCreateTechnologyAlertNotificationAndViewInFeed_188060"/>
+                    <include name="verifyCreateCodeGreenProductNotificationAndViewInFeed_188059"/>
+                    <include name="verifyCreateCodeYellowProductAlertNotificationAndViewInFeed_188058"/>
+                    <include name="verifyCreateCodeRedProductAlertNotificationAndViewInFeed_188050"/>
+                    <include name="verifyNotificationsSortedBasedOnDistributionPriority_188045"/>
+                    <include name="verifyNotificationContentInFeed_116687_116539"/>
+                    <include name="FeedNotificationsShouldBeDisplayedInDescOrderOfTheirPublishedDate_150269_188049"/>
+                    <include name="CLikeAnArticleThisIsAWorkaround_122563"/>
+                </methods>
+            </class>
+
+            <class name="tests.EndToEnd.EndToEnd">
+                <methods>
+                    <include name="verifyPublishedEnglishSingleArticleHasBeenViewedInFeed_129698"/>
+                    <include name="verifyPublishedGermanSingleArticleHasBeenViewedInFeed_129694"/>
+                    <include name="verifyPublishedPortugueseSingleArticleHasBeenViewedInFeed_129696"/>
+                    <include name="verifyPublishedSimplifiedPRCSingleArticleHasBeenViewedInFeed_129697"/>
+                    <include name="verifyPublishedKoreanArticleHasBeenViewedInFeed_129700"/>
+                    <include name="verifyPublishedFrenchSingleArticleHasBeenViewedInFeed_129680"/>
+                    <include name="verifyPublishedChineseTraditionalTaiwanSingleArticleHasBeenViewedInFeed_125064"/>
+                    <include name="verifyPublishedTurkishSingleArticleHasBeenViewedInFeed_186638"/>
+                    <include name="verifyPublishedSpanishSingleArticleHasBeenViewedInFeed_186598"/>
+                    <include name="verifyCallToActionContentShouldAppearAboveFeaturedContentInTheRightRail_165723_165049"/>
+                    <include name="verifyContentInHomeNewsFeedAreDisplayingWithPriorityOrder_186288"/>
+                    <include name="verifyContentForMultipleHighPriorityArticlesSortByTimeOnHomeNewsFeed_186289"/>
+                    <include name="targetingACallToActionViaDistribution_173816_165039"/>
+                    <include name="feedVerifyWhetherUserCanSeeContentInNewsFeedSectionForTargetedSegment_161408"/>
+                    <include name="verifyHomeCarouselContentSortedBasedOnDistributionPriority_165401"/>
+                    <include name="verifyHomeCarouselContentAppearedOnOrAfterTheDistributionScheduledDate_165037"/>
+                    <include name="verifyTargetingUsersWithContentSpotlightOrCarousel_152277_165402"/>
+                    <include name="verifyHomeCarouselContentDisplayForTargetedExcludedUsers_165403_165421"/>
+                    <include name="verifyATargetingUsersWithContentNewsfeed_152147"/>
+                    <include name="verifyTargetingUsersWithContentHomeFeatureListOrRightRail_152276"/>
+                    <include name="verifyContentVerificationForExcludedSegmentsUsers_161409"/>
+                    <include name="verifyContentIsAppearedOnOrAfterTheDistributionsScheduledDateButNotBefore_161411"/>
+                    <include name="verifyUserCanSeeOlderContentOfNewsFeed_161407"/>
+                    <include name="verifyNewsFeedContentIsDisplayedBasedOnDistributionPriority_161406"/>
+                    <include name="verifyHomeFeatureContentAppearedOnOrAfterTheDistributionScheduledDate_161403"/>
+                    <include name="verifyHomeFeatureContentDisplayForExcludedSegmentsUserAfterTheDistributionScheduledDate_161401"/>
+                    <include name="verifyHomeFeatureContentAppearedForTargetedUserOnOrAfterTheDistributionScheduledDate_161400_161398"/>
+                    <include name="verifyHomeFeatureContentAppearedForTargetedUserBasedOnDistributionPriority_161397"/>
+                    <include name="verifyFeedViewDocumentsOnTheFeedFeatureList_172632"/>
+                </methods>
+            </class>
+            <class name="tests.Feed.SearchResultsTest">
+                <methods>
+                    <include name="verifyNoResultsFoundMessageInSearchResults_190413"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
